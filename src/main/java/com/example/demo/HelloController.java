@@ -22,4 +22,9 @@ public class HelloController {
         return "Goodbye, " + name;
     }
 
+    @GetMapping("/shout/{name}")
+    public String shout(@PathVariable String name) {
+        return name.toUpperCase() + "!";
+    }
+
 }
